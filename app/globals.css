@@ -9,6 +9,13 @@ html {
 
 :root {
     --radius: 0.625rem;
+    --page-background: #f5efe4;
+    --page-foreground: #18212f;
+    --surface: rgba(255, 252, 247, 0.76);
+    --surface-strong: rgba(255, 252, 247, 0.94);
+    --line: rgba(24, 33, 47, 0.1);
+    --brand: #0f766e;
+    --brand-deep: #11253f;
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
@@ -117,8 +124,26 @@ html {
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+
+    html {
+        color-scheme: light;
     }
   body {
-    @apply bg-background text-foreground;
+      @apply text-foreground;
+      background: radial-gradient(circle at top left, rgba(15, 118, 110, 0.18), transparent 28%),
+      radial-gradient(circle at top right, rgba(226, 155, 68, 0.18), transparent 24%),
+      linear-gradient(180deg, #f9f4eb 0%, #f5efe4 42%, #f1ebdf 100%);
+      color: var(--page-foreground);
+      font-family: var(--font-manrope), sans-serif;
+  }
+
+    ::selection {
+        background: rgba(15, 118, 110, 0.18);
+        color: #0f172a;
+    }
+
+    a {
+        @apply transition-colors;
     }
 }

@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be4361e6-859d-4a10-b85a-6e80bc5b59e6" name="Changes" comment="ContactMe Form and Project Modal Polishing">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../portfolio/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../portfolio/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../portfolio/postcss.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/../portfolio/postcss.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Project-Section/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Project-Section/ProjectCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Project-Section/ProjectModal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Project-Section/ProjectSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Project-Section/ProjectSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="36" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,12 +65,16 @@
     &quot;assignee&quot;: &quot;Nedim-Kevro&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/corner-table/landing-page.git&quot;,
-    &quot;accountId&quot;: &quot;e030ee4e-7ddd-4366-8adc-c3e757764024&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/PrimalCodex/personal-portfolio.git",
+    "accountId": "0a42e350-409c-4806-aa10-49e14f054d33"
   }
-}</component>
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -76,10 +89,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+    "js.debugger.nextJs.config.created.client": "true",
     "jsx.switch.disabled": "true",
     "last_opened_file_path": "C:/Users/Korisnik/Desktop/NextJs",
     "node.js.detected.package.eslint": "true",
@@ -88,7 +104,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.VCS",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "ts.external.directory.path": "C:\\Users\\Korisnik\\WebstormProjects\\portfolio\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -111,7 +127,10 @@
       <recent name="C:\Users\Korisnik\WebstormProjects\portfolio\app\components\Project-Section" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -126,7 +145,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
       </set>
     </attachedChunks>
   </component>
@@ -165,6 +184,11 @@
       <workItem from="1748023277048" duration="9000" />
       <workItem from="1748253317954" duration="2324000" />
       <workItem from="1748343937209" duration="328000" />
+      <workItem from="1748346226676" duration="59000" />
+      <workItem from="1748346315248" duration="1657000" />
+      <workItem from="1754579913768" duration="1000" />
+      <workItem from="1754579920040" duration="8000" />
+      <workItem from="1778748940248" duration="477000" />
     </task>
     <task id="LOCAL-00001" summary="portofolio">
       <option name="closed" value="true" />
@@ -265,6 +289,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="portofolio init" />
     <MESSAGE value="portofolio" />
     <MESSAGE value="add/projects section, projects card/projects modal" />

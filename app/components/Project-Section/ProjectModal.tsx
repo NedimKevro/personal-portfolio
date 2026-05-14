@@ -1,8 +1,9 @@
 import {Dialog, Transition} from "@headlessui/react";
 import React, {Fragment} from "react";
+import {ArrowUpRight, X} from "lucide-react";
 import {Swiper, SwiperSlide} from "swiper/react";
-import "swiper/css";
 import {Navigation, Pagination} from "swiper/modules";
+import "swiper/css";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -25,71 +26,109 @@ export default function ProjectModal({
 }: ProjectModalProps) {
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-50 " onClose={closeModal}>
-        <div className="fixed inset-0 bg-black bg-opacity-30"/>
-        <div className="fixed max-h-full inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center ">
-            <Dialog.Panel className="w-full h-full  transform overflow-hidden bg-white p-6 text-left
-            align-middle shadow-xl transition-all">
-              <Dialog.Title as="h3" className="text-2xl font-bold text-gray-900 mb-4">
-                {title}
-              </Dialog.Title>
-              <p className="text-gray-700 mb-4">{description}</p>
-
-              <div className="mb-4 relative">
-                <Swiper
-                  modules={[Navigation, Pagination]}
-                  navigation={{
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                  }}
-                  pagination={{clickable: true}}
-                  spaceBetween={10}
-                  slidesPerView={1}
-                  className="rounded-md"
-                >
-                  {images.map((src, i) => (
-                    <SwiperSlide key={i}>
-                      <img src={src} alt={`Screenshot ${i + -1}`} className="w-full rounded-md"/>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+      <Dialog as="div" className="relative z-50" onClose={closeModal}>
+        <div className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm"/>
+        <div className="fixed inset-0 overflow-y-auto px-4 py-6 md:px-6 md:py-10">
+          <div className="mx-auto flex min-h-full max-w-5xl items-center justify-center">
+            <Dialog.Panel
+              className="w-full overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,#10223a_0%,#162a45_100%)] text-left text-white shadow-[0_30px_90px_rgba(0,0,0,0.35)] transition-all">
+              <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 md:px-8">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3em] text-white/50">Project spotlight</p>
+                  <Dialog.Title as="h3"
+                                className="mt-2 font-[family:var(--font-space-grotesk)] text-2xl font-bold tracking-[-0.04em] md:text-3xl">
+                    {title}
+                  </Dialog.Title>
+                </div>
                 <button
-                  className="swiper-button-prev text-4xl hover:scale-105 text-gray-500 text-center text-gray size-15 absolute top-1/2 left-0 -translate-y-1/2 z-10 p-2 bg-blend-darken rounded-full shadow-md ">
-                  ‹
-                </button>
-                <button
-                  className="swiper-button-next text-4xl hover:scale-105 text-gray-500 size-15 absolute top-1/2 right-0 -translate-y-1/2 z-10 p-2 bg-blend-darken rounded-full shadow-md hover:elev">
-                  ›
-                </button>
-              </div>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {tech.map((t, i) => (
-                  <span key={i} className="bg-gray-100 text-sm text-gray-700 px-2 py-1 rounded-full">
-                    {t}
-                  </span>
-                ))}
-              </div>
-              {github ? (
-                <a
-                  //projects Link
-                  href={github}
-                  target="_blank"
-                  className="inline-block mt-2 text-blue-600 hover:underline"
-                >
-                  🔗 View GitHub Repository
-                </a>
-              ) : (
-                <p className="text-gray-500 text-sm mt-2">Source code available on request.</p>
-              )}
-
-              <div className="mt-6">
-                <button
+                  type="button"
                   onClick={closeModal}
-                  className="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/80 hover:bg-white/10 hover:text-white"
                 >
-                  Close
+                  <X size={20}/>
                 </button>
+              </div>
+
+              <div className="grid gap-8 px-5 py-6 md:px-8 md:py-8 lg:grid-cols-[1.25fr_0.75fr]">
+                <div className="space-y-5">
+                  <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/5">
+                    <Swiper
+                      modules={[Navigation, Pagination]}
+                      navigation={{
+                        nextEl: ".project-swiper-next",
+                        prevEl: ".project-swiper-prev",
+                      }}
+                      pagination={{clickable: true}}
+                      spaceBetween={16}
+                      slidesPerView={1}
+                    >
+                      {images.map((src, i) => (
+                        <SwiperSlide key={src}>
+                          <img
+                            src={src}
+                            alt={`${title} screenshot ${i + 1}`}
+                            className="h-full max-h-[460px] w-full object-cover"
+                          />
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-3">
+                    <button
+                      type="button"
+                      className="project-swiper-prev rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white"
+                    >
+                      Prev
+                    </button>
+                    <button
+                      type="button"
+                      className="project-swiper-next rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white"
+                    >
+                      Next
+                    </button>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <p className="text-sm leading-7 text-white/74">{description}</p>
+
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.24em] text-white/50">Tech stack</p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {tech.map((item) => (
+                        <span
+                          key={item}
+                          className="rounded-full border border-white/12 bg-white/6 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-white/75"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="rounded-[28px] border border-white/10 bg-white/5 p-5">
+                    <p className="text-xs uppercase tracking-[0.24em] text-white/50">Project summary</p>
+                    <p className="mt-3 text-sm leading-7 text-white/72">
+                      A frontend build centered on clarity, responsive layout behavior, and an interface that keeps the
+                      product workflow easy to understand.
+                    </p>
+                  </div>
+
+                  {github ? (
+                    <a
+                      href={github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-teal-300"
+                    >
+                      View GitHub Repository
+                      <ArrowUpRight size={16}/>
+                    </a>
+                  ) : (
+                    <p className="text-sm text-white/55">Source code is available on request.</p>
+                  )}
+                </div>
               </div>
             </Dialog.Panel>
           </div>
